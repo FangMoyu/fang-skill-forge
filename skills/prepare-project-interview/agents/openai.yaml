@@ -1,0 +1,5 @@
+interface:
+  display_name: "项目面试突击"
+  short_description: "从简历草稿反向学习陌生项目，系统准备源码分析与技术追问"
+  default_prompt: "使用 $prepare-project-interview 为这个开源项目生成真实、简历先行的三天面试学习计划。"
+
