@@ -1,0 +1,7 @@
+interface:
+  display_name: "简历项目面试拷打"
+  short_description: "基于简历和项目源码进行阶梯式校招面试拷打与答案纠错"
+  default_prompt: "Use $grilling-resume-projects to conduct a one-question-at-a-time campus-recruitment interview based on my resume and project source."
+policy:
+  allow_implicit_invocation: true
+
