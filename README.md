@@ -12,6 +12,7 @@
 | --- | --- | --- |
 | [`prepare-project-interview`](skills/prepare-project-interview/) | 从源码证据出发准备真实、可追问的简历项目内容 | 无 |
 | [`grilling-resume-projects`](skills/grilling-resume-projects/) | 进行简历优先、逐题评分、阶梯难度的项目面试拷打 | 源码对齐场景需要 `prepare-project-interview` |
+| [`project-resume-visual-interview-kit`](skills/project-resume-visual-interview-kit/) | 从项目源码生成简历、业务流程图和完整面试学习资料包 | 需要前两个 Skill；生成 Excalidraw 时可选用 `excalidraw-diagram-generator` |
 
 ## 安装
 
@@ -26,6 +27,7 @@ $codexRoot = if ([string]::IsNullOrWhiteSpace($env:CODEX_HOME)) {
 
 Copy-Item -Recurse .\skills\prepare-project-interview (Join-Path $codexRoot 'skills\prepare-project-interview')
 Copy-Item -Recurse .\skills\grilling-resume-projects (Join-Path $codexRoot 'skills\grilling-resume-projects')
+Copy-Item -Recurse .\skills\project-resume-visual-interview-kit (Join-Path $codexRoot 'skills\project-resume-visual-interview-kit')
 ```
 
 ### Bash
@@ -34,6 +36,7 @@ Copy-Item -Recurse .\skills\grilling-resume-projects (Join-Path $codexRoot 'skil
 CODEX_ROOT="${CODEX_HOME:-$HOME/.codex}"
 cp -R skills/prepare-project-interview "$CODEX_ROOT/skills/prepare-project-interview"
 cp -R skills/grilling-resume-projects "$CODEX_ROOT/skills/grilling-resume-projects"
+cp -R skills/project-resume-visual-interview-kit "$CODEX_ROOT/skills/project-resume-visual-interview-kit"
 ```
 
 如果目标目录已经存在，请先备份并确认差异，不要直接覆盖正在使用的版本。
@@ -43,13 +46,16 @@ cp -R skills/grilling-resume-projects "$CODEX_ROOT/skills/grilling-resume-projec
 ```text
 $prepare-project-interview 帮我为这个项目准备校招面试。
 $grilling-resume-projects 请基于我的简历项目逐题拷打我。
+$project-resume-visual-interview-kit 请基于项目源码生成简历、业务流程图和完整面试资料包。
 ```
 
 ## 两个 Skill 如何配合
 
-`prepare-project-interview` 负责项目结构、源码链路、证据卡、简历 Claim 和掌握度；`grilling-resume-projects` 负责逐题提问、评分、答案纠错和难度调整。
+`prepare-project-interview` 负责项目结构、源码链路、证据卡、简历 Claim 和掌握度；`grilling-resume-projects` 负责逐题提问、评分、答案纠错和难度调整；`project-resume-visual-interview-kit` 在两者之上组织完整的简历、业务图和学习资料包。
 
 只有简历内容时，可以直接使用 `grilling-resume-projects`。存在项目源码或需要核对简历与源码时，应同时安装两个 Skill。
+
+需要生成完整可视化资料包时，安装全部三个 Skill；只有用户明确要求生成或校验 Excalidraw 图时，才额外安装 `excalidraw-diagram-generator`。
 
 ## 真实性边界
 
