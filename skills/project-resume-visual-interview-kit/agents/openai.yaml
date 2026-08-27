@@ -1,0 +1,8 @@
+interface:
+  display_name: "Project Resume Visual Interview Kit"
+  short_description: "Build visual resume and interview study kits"
+  default_prompt: "Use $project-resume-visual-interview-kit to turn this project's source and resume notes into a visual, source-grounded interview kit."
+
+policy:
+  allow_implicit_invocation: true
+
